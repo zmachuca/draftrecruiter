@@ -1,4 +1,6 @@
-<h1>Your Job Postings</h1>
+<%= render 'pages/home' unless user_signed_in? %>
+
+<h1>Job Postings</h1>
 
 <table>
   <thead>
@@ -28,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Create New Job Post', new_post_path %>
