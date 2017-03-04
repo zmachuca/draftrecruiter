@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   respond_to :html
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
     respond_with(@posts)
   end
 
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to post_url
+    redirect_to posts_url
   end
 
   private
