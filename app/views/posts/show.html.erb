@@ -3,8 +3,8 @@
 <p>
   <strong>Job Title:</strong>
   <%= @post.title %>
-  <strong>Description:</strong>
-  <%= @post.description %>
+  <strong>Requirements:</strong>
+  <%= @post.requirement %>
 </p>
 <% if @post.user == current_user %>
 	<%= link_to 'Edit', edit_post_path(@post) %> |

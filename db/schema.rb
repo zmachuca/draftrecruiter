@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170302023830) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "description"
+    t.string   "requirement"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
