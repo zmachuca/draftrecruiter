@@ -7,6 +7,8 @@
   <%= @post.requirement %>
   <strong>Industry:</strong>
   <%= @post.industry %>
+  <strong>Location:</strong>
+  <%= @post.location %>
 </p>
 <% if @post.user == current_user %>
 	<%= link_to 'Edit', edit_post_path(@post) %> |
