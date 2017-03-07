@@ -1,3 +1,3 @@
-# DraftRecruiter
+# Jobfill
 
-This is the DraftRecruiter beta project.
+This is the Jobfill beta project.
