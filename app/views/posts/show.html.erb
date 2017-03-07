@@ -5,6 +5,8 @@
   <%= @post.title %>
   <strong>Requirements:</strong>
   <%= @post.requirement %>
+  <strong>Industry:</strong>
+  <%= @post.industry %>
 </p>
 <% if @post.user == current_user %>
 	<%= link_to 'Edit', edit_post_path(@post) %> |

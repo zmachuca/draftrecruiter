@@ -7,6 +7,7 @@
     <tr>
       <th>Job Title</th>
       <th>Requirements</th>
+      <th>Industry</th>
       <th>User</th>
       <th colspan="3"></th>
     </tr>
@@ -17,6 +18,7 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.requirement %></td>
+        <td><%= post.industry %></td>
         <td><%= post.user.username if post.user %></td>
         <td><%= link_to 'Show', post %></td>
         <% if post.user == current_user %>
