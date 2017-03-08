@@ -17,6 +17,11 @@
        <%= f.text_field :name, class: "form-control", :autofocus => true %>
      </div>
 
+     <div class="form-group">
+        <%= f.label :company %>
+        <%= f.select :company, ['Synerfac Technical Staffing', 'Aerotek', 'Human Capital'], class: "form-control", :autofocus => true %>
+    </div>
+
       <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
