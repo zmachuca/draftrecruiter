@@ -8,27 +8,27 @@
       <%= devise_error_messages! %>
 
       <div class="form-group">
-       <%= f.label :username %>
+       <%= f.label :username, 'Username:' %>
        <%= f.text_field :username, class: "form-control", :autofocus => true %>
      </div>
 
       <div class="form-group">
-       <%= f.label :name %>
+       <%= f.label :namem, 'First & Last Name:' %>
        <%= f.text_field :name, class: "form-control", :autofocus => true %>
      </div>
 
      <div class="form-group">
-        <%= f.label :company %>
+        <%= f.label :company, 'Company:' %>
         <%= f.select :company, ['Synerfac Technical Staffing', 'Aerotek', 'Human Capital'], class: "form-control", :autofocus => true %>
     </div>
 
       <div class="form-group">
-        <%= f.label :email %>
+        <%= f.label :email, 'Email Address:' %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
 
       <div class="form-group">
-        <%= f.label :password %>
+        <%= f.label :password, 'Password:' %>
         <%= f.password_field :password, class: "form-control" %>
       </div>
 
