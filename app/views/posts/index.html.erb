@@ -1,15 +1,17 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
+<h1>Job Postings</h1>
 <div class="job-results">
-  <h1>Job Postings</h1>
   <div class="job-list card">
+    <div class="sorting-options">
+    Sort By:
+    </div>
     <% @posts.each do |post| %>
-      <h3 class="job-title"><%= post.title %></h3>
+      <h3 class="job-title"><%= link_to post.title, post %></h3>
         <td>Industry: <%= post.industry %></td><br>
         <td>Requirements: <%= post.requirement %></td><br>
         <td>Location: <%= post.location %></td><br>
         <td>Posted by: <%= post.user.username if post.user %></td><br>
-          <td><%= link_to 'Show', post %></td>
             <% if post.user == current_user %>
               <td><%= link_to 'Edit', edit_post_path(post) %></td>
               <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
