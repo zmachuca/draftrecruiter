@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Job Title:</strong>
-  <%= @post.title %>
-  <strong>Requirements:</strong>
-  <%= @post.requirement %>
-  <strong>Industry:</strong>
-  <%= @post.industry %>
-  <strong>Location:</strong>
-  <%= @post.location %>
-</p>
-<% if @post.user == current_user %>
-	<%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
-	<%= link_to 'Back', posts_path %>
+<div class="job-results">
+  <div class="job-list card">
+    <h3 class="job-title"><%= @post.title %></h3>
+      <td>Industry: <%= @post.industry %></td><br>
+      <td>Requirements: <%= @post.requirement %></td><br>
+      <td>Location: <%= @post.location %></td><br>
+      <td>Posted by: <%= @post.user.username if @post.user %></td><br>
+    <% if @post.user == current_user %>
+	   <%= link_to 'Edit', edit_post_path(@post) %> |
+    <% end %>
+	   <%= link_to 'Back', posts_path %>
+  </div>
+</div>
