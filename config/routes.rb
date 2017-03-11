@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :posts do
+    resources :resumes, only: [:new, :create]
+  end
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users, only: [:show]
-  resources :resumes, only: [:new, :create]
   
   root "posts#index"
   get "about" => "pages#about" #creates about_path

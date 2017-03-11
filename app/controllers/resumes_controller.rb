@@ -1,8 +1,8 @@
 class ResumesController < ApplicationController
 
 	def new
-    @resume = current_user.resumes.build
-    respond_with(@post)
+    @resume = Resume.new
+    @post = Post.find(params[:post_id])
   end
 
 	def create

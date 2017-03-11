@@ -1,0 +1,8 @@
+<%= form_for [@post, @resume] do |f| %>
+
+<div class="form-group">
+    <%= f.label :document %>
+    <%= f.file_field :document, class: "form-control" %>
+  </div>
+
+<% end %>
