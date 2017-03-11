@@ -6,9 +6,11 @@ class ResumesController < ApplicationController
   end
 
 	def create
-    @resume = current_user.resumes.build(resume_params)
+    @resume = Resume.new(resume_params)
+    @resume.user_id = current_user.id
+    @resume.post_id = params[:post_id]
     if @resume.save
-      redirect_to @resume, notice: 'Resume was successfully created'
+      redirect_to @, notice: 'Resume was successfully sent'
     else
       render :new
     end
