@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+// post index
+
 .card {
 	border-radius: 3px;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
@@ -17,4 +20,33 @@
 	padding-bottom: 20px;
 	margin-top: 15px;
 }
+
+// forms
+
+.label {
+	margin-top: 30px;
+}
+
+.form-control {
+	width: 50%;
+	margin-bottom: 5px;
+}
+
+.industry-form {
+	margin-top: 10px;
+}
+
+.location-form {
+	margin-top: 10px;
+}
+
+.requirement-form {
+	margin-top: 10px;
+}
+
+
+
+
+
+
 
