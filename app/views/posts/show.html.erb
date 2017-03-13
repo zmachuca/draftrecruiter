@@ -6,11 +6,13 @@
       <td>Industry: <%= @post.industry %></td><br>
       <td>Requirements: <%= @post.requirement %></td><br>
       <td>Location: <%= @post.location %></td><br>
-      <td>Posted by: <%= @post.user.username if @post.user %></td><br>
+      <td>Posted by: <%= link_to @post.user.username, @post.user if @post.user %></td><br>
     <% if @post.user == current_user %>
 	   <%= link_to 'Edit', edit_post_path(@post) %> |
     <% end %>
-     <%= link_to 'Send Resume', new_post_resume_path(@post), class: "btn btn-primary btn-sm"  %>
      <%= link_to 'Back', posts_path %>
+     <% if @post.user == current_user %>
+     <%= link_to 'Send Resume', new_post_resume_path(@post), class: "btn btn-primary btn-sm"  %>
+     <% end %>
   </div>
 </div>

@@ -1,16 +1,28 @@
-<div class="my-profile">
-  <div class="my-profile card">
-    <h1>My Profile</h1>
-          <th>Username: <%= @user.username %></th><br>
-          <th>Name: <%= @user.name %></th><br>
+<div class="profile">
+  <div class="profile card">
+    <div class="profile-list">
+    <h1><%= @user.username %>'s Profile:</h1>
           <% if @user == current_user %>
+          <th>Username: <%= @user.username %></th><br>
+            <th>Name: <%= @user.name %></th><br>
             <th>Company <i>Only seen by you: <%= @user.company %> </i></th><br>
-          <% end %>
-          <th>Email: <%= @user.email %></th><br>
-          <th colspan="3"></th>
-
+            <th>Email: <%= @user.email %></th><br>
+            <% end %>
       <% if current_user == @user %>
         <%= link_to "Edit My Profile", edit_user_registration_path %>
       <% end %>
+    </div> <%# profile-list %>
   </div> <%# my-profile card %>
-</div> <%# my-profile %>
+
+  <div class="profile card">
+    </div class="profile-list">
+    <h1><%= @user.username %>'s Job Posts:</h1>
+
+
+
+      <div class="post-new-job">
+        <%= link_to "Post a New Job", new_post_path, class: "btn btn-primary btn-md" %>
+      </div>
+    </div> <%# profile-list %>
+  </div> <%# profile-card %>
+</div> <%# profile %>
