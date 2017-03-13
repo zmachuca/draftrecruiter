@@ -9,11 +9,7 @@ class ResumesController < ApplicationController
     @resume = Resume.new(resume_params)
     @resume.user_id = current_user.id
     @resume.post_id = params[:post_id]
-    if @resume.save
-      redirect_to @, notice: 'Resume was successfully sent'
-    else
-      render :new
-    end
+
   end
 
   private

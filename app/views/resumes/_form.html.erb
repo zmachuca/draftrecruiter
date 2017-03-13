@@ -1,11 +1,16 @@
-<%= form_for [@post, @resume] do |f| %>
+<div class="upload-resume">
+	<div class="upload-resume card">
+		<%= form_for [@post, @resume] do |f| %>
 
-<div class="form-group">
-    <%= f.label :document, "Upload a Resume for:" %> 
-    <%= f.file_field :document, class: "form-control" %>
-  </div>
-<div class="form-group">
-    <%= f.submit "Send Resume", class: "btn btn-primary" %>
- </div>
+		<div class="form-group">
+		    <%= f.label :document, "Upload a Resume for:" %> <%= @post.title %>
+		    <%= f.file_field :document, class: "form-control" %>
+		  </div>
+		<div class="form-group">
+		    <%= f.submit "Send Resume", class: "btn btn-primary" %>
+		 </div>
+		 <%= link_to 'Back', posts_path %>
 
-<% end %>
+		<% end %>
+	</div>
+</div>
