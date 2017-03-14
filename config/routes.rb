@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root "posts#index"
   get "about" => "pages#about" #creates about_path
   get "how_it_works" => "pages#how_it_works"
+  get "privacy" => "pages#privacy"
+  get "terms_conditions" => "pages#terms_conditions"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -2,10 +2,10 @@
 	<div class="upload-resume card">
 		<%= form_for [@post, @resume] do |f| %>
 
-		<div class="form-group">
+		<h3><div class="form-group">
 		    <%= f.label :document, "Upload a Resume for:" %> <%= @post.title %>
 		    <%= f.file_field :document, class: "form-control" %>
-		  </div>
+		  </div></h3>
 		<div class="form-group">
 		    <%= f.submit "Send Resume", class: "btn btn-primary" %>
 		 </div>
