@@ -14,12 +14,17 @@
      </div>
 
       <div class="form-group">
-       <%= f.label :namem, 'First & Last Name:' %>
-       <%= f.text_field :name, class: "form-control", :autofocus => true %>
+       <%= f.label :first_name, 'First Name:' %>
+       <%= f.text_field :first_name, class: "form-control", :autofocus => true %>
      </div>
 
      <div class="form-group">
-        <%= f.label :company, 'Company (Can only be seen by you):' %>
+       <%= f.label :last_name, 'First Name:' %>
+       <%= f.text_field :last_name, class: "form-control", :autofocus => true %>
+     </div>
+
+     <div class="form-group">
+        <%= f.label :company, 'Company:' %>
         <%= f.select :company, ['- Please Select -', 'ACA Talent', 'Aerotek', 'AlphaStaff', 'Centra Healthcare Solutions', 'The Execu|Search Group', 'Human Capital Management', 'Spherion', 'Staffmark', 'Synerfac Technical Staffing', 'TekPartners'], class: "form-control", :autofocus => true %>
     </div>
 

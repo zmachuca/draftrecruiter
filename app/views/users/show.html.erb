@@ -5,7 +5,7 @@
           <% if @user == current_user %>
           <h2><i>Only seen by you:</i></h2>
           <th>Username: <%= @user.username %></th><br>
-            <th>Name: <%= @user.name %></th><br>
+            <th>Name: <%= @user.first_name %> <%= @user.last_name %></th><br>
             <th>Company: <%= @user.company %> </th><br>
             <th>Email: <%= @user.email %></th><br>
             <% end %>
