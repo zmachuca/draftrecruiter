@@ -1,7 +1,7 @@
 <div class="profile">
   <div class="profile card">
     <div class="profile-list">
-    <h1><%= @user.username %>'s Profile:</h1>
+    <h1> My Profile: </h1>
           <% if @user == current_user %>
           <h2><i>Only seen by you:</i></h2>
           <th>Username: <%= @user.username %></th><br>
@@ -14,16 +14,24 @@
       <% end %>
     </div> <%# profile-list %>
   </div> <%# my-profile card %>
-
-  <div class="profile card">
-    </div class="profile-list">
-    <h1><%= @user.username %>'s Job Posts:</h1>
-
-
-
-      <div class="post-new-job">
-        <%= link_to "Post a New Job", new_post_path, class: "btn btn-primary btn-md" %>
-      </div>
-    </div> <%# profile-list %>
-  </div> <%# profile-card %>
-</div> <%# profile %>
+<div class="job-results">
+  <div class="job-list card">
+    <div class="sorting-options">
+      <h1> My Job Posts: </h1>
+        <% @user.posts.each do |post| %>
+          <h3 class="job-title"><%= link_to post.title, post %></h3>
+            <td>Industry: <%= post.industry %></td><br>
+            <td>Requirements: <%= post.requirement %></td><br>
+            <td>Location: <%= post.location %></td><br>
+            <td>Posted by: <%= link_to post.user.username, post.user if post.user %></td><br>
+                <% if post.user == current_user %>
+                  <td><%= link_to 'Edit', edit_post_path(post) %></td>
+                  <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% end %>
+        <% end %>
+        <div class="post-new-job">
+          <%= link_to "Post a New Job", new_post_path, class: "btn btn-primary btn-md" %>
+        </div>
+    </div> <%# sorting-options %>
+  </div> <%# job-list card %>
+</div> <%# job-results %>
