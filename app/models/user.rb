@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
    has_many :posts
    has_many :resumes
+   has_many :incoming_resumes, through: :posts, source: :resumes
 end

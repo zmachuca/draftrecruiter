@@ -9,7 +9,9 @@ class ResumesController < ApplicationController
     @resume = Resume.new(resume_params)
     @resume.user_id = current_user.id
     @resume.post_id = params[:post_id]
-
+    if @resume.save 
+      redirect_to :root
+    end
   end
 
   private

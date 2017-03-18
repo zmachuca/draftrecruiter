@@ -1,9 +1,13 @@
 <div class="profile">
   <div class="profile card">
     <div class="profile-list">
-    <h1> My Profile: </h1>
+    <% if current_user == @user %>
+      <h1> My Profile: </h1>
+    <% else %>
+      <h1>  <%= @user.username %>'s Profile: </h1>
+    <% end %>
           <% if @user == current_user %>
-          <h2><i>Only seen by you:</i></h2>
+          <h2><i>This information is only seen by you.</i></h2>
           <th>Username: <%= @user.username %></th><br>
             <th>Name: <%= @user.first_name %> <%= @user.last_name %></th><br>
             <th>Company: <%= @user.company %> </th><br>
@@ -17,7 +21,11 @@
 <div class="job-results">
   <div class="job-list card">
     <div class="sorting-options">
-      <h1> My Job Posts: </h1>
+      <% if current_user == @user %>
+        <h1> My Job Posts: </h1>
+      <% else %>
+        <h1>  <%= @user.username %>'s Job Posts: </h1>
+      <% end %>
         <% @user.posts.each do |post| %>
           <h3 class="job-title"><%= link_to post.title, post %></h3>
             <td>Industry: <%= post.industry %></td><br>
