@@ -14,6 +14,10 @@ class ResumesController < ApplicationController
     end
   end
 
+  def inbox
+    @resumes = current_user.incoming_resumes.order("post_id ASC")
+    end
+
   private
 
   def resume_params

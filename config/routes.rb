@@ -7,12 +7,13 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   
   root "posts#index"
-  get "about" => "pages#about" #creates about_path
+  get "about" => "pages#about"
   get "how_it_works" => "pages#how_it_works"
   get "privacy" => "pages#privacy"
   get "terms_conditions" => "pages#terms_conditions"
   get "pricing" => "pages#pricing"
   get "faq" => "pages#faq"
+  get "inbox" => "resumes#inbox"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

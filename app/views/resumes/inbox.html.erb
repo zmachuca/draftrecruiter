@@ -1,0 +1,3 @@
+<% @resumes.each do |resume| %>
+<p> <%= resume.post.title %> <%= link_to resume.document_file_name, resume.document.url %> </p>
+<% end %>
