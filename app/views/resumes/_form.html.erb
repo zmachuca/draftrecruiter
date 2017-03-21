@@ -6,10 +6,10 @@
 		    <%= f.label :document, "Upload a Resume for:" %> <%= @post.title %>
 		    <%= f.file_field :document, class: "form-control" %>
 		  </div></h3>
-		  <p><strong>BEFORE YOU SUBMIT:</strong>
-		  <br><i>- Does this Resume have the Candidate's contact information?
-		  <br>- Is this Candidate local or willing to relocate?
-			<br>- Have <u>you</u> spoken to this Candidate in the past?</i></p>
+		  <p><strong>CONFIRM THE FOLLOWING:</strong>
+		  <br><i>- This Resume contains the Candidate's contact information.
+		  <br>- This Candidate is local or willing to relocate.
+			<br>- I have spoken to this Candidate in the past.</i></p>
 		<div class="form-group">
 		    <%= f.submit "Yes to all the above! Send Resume!", class: "btn btn-primary" %>
 		 </div>
