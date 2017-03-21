@@ -15,7 +15,7 @@ class ResumesController < ApplicationController
   end
 
   def inbox
-    @resumes = current_user.incoming_resumes.order("post_id ASC")
+    @resumes = current_user.incoming_resumes.order("created_at DESC")
     end
 
   private
