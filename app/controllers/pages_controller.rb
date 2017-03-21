@@ -10,4 +10,10 @@ class PagesController < ApplicationController
 
   def pricing
   end
+
+  def privacy
+  end
+
+  def terms_conditions
+  end
 end

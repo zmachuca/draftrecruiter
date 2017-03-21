@@ -12,6 +12,7 @@
         <td>Requirements: <%= post.requirement %></td><br>
         <td>Location: <%= post.location %></td><br>
         <td>Posted by: <%= link_to post.user.username, post.user if post.user %></td><br>
+        <td>Posted on: <%= post.created_at.strftime("%A, %b %d, %Y") %> </td><br>
             <% if post.user == current_user %>
               <td><%= link_to 'Edit', edit_post_path(post) %> |</td>
               <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
