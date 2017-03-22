@@ -1,10 +1,16 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
-<div class="index_search">
-  <%= form_tag(posts_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Jobs" %>
-  <%= submit_tag "Search", :name => nil %>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5 col-md-6">
+          <div class="input-group">
+            <%= form_tag posts_path, :method => "get", id: "search-form" do %>
+            <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Jobs" %>
+            <%= submit_tag "Search", class: 'btn btn-primary btn-md', :name => nil %>
+        </div>
+          <% end %>
+    </div>
+  </div>
 </div>
 
 <h1>Most Recent:</h1>
