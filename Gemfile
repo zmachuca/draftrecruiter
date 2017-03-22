@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1'
 gem "paperclip", "~> 5.0.0"
 # paginate
 gem 'will_paginate', '~> 3.1.1'
+# paginate bootstrap
+gem 'will_paginate-bootstrap'
 
 
 # bundle exec rake doc:rails generates the API under doc/api.

@@ -34,7 +34,9 @@
             <% end %>
     <% end %>
   </div> <%# job-list card %>
-  <p><%= will_paginate @posts %></p>
+    <div class="paginate">
+     <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+    </div>
   <div class="post-new-job">
     <%= link_to "Post a New Job", new_post_path, class: "btn btn-primary btn-lg" %>
   </div>
