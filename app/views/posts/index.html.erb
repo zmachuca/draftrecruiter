@@ -1,13 +1,11 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 <div class="container">
-  <div class="row">
-    <div class="small-12 columns">
-          <div class="input-group">
+  <div class="row search">
+    <div class="col-md-8 input-group">
             <%= form_tag posts_path, :method => "get", id: "search-form" do %>
             <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Jobs" %>
             <%= submit_tag "Search", class: 'btn btn-primary btn-md', :name => nil %>
-        </div>
           <% end %>
     </div>
   </div>
@@ -17,7 +15,6 @@
 <div class="job-results">
   <div class="job-list card">
     <div class="sorting-options">
-    Sort By:
     </div>
     <% @posts.each do |post| %>
       <h3 class="job-title"><%= link_to post.title, post %></h3>

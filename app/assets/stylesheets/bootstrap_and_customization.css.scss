@@ -55,6 +55,16 @@ $jumbotron-bg:                     white;
 	margin-right: auto;
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+.row .fill {
+	margin-right: 400px;
+}
+
+#hero {
 	max-width: 62.5em;
 }
 
+.row .search {
+	align: left;
+}
