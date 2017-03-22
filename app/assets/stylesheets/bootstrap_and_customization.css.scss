@@ -35,6 +35,10 @@ $jumbotron-bg:                     white;
   padding-top: 30px;
 }
 
+.footer .container {
+	min-width: 100%;
+}
+
 .footer-bottom {
 	border-radius: 3px;
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.25);
@@ -43,9 +47,14 @@ $jumbotron-bg:                     white;
 	padding-bottom: 5px;
 }
 
+// home
 
-
-
-
-
+.row {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 62.5em;
+}
 

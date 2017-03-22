@@ -28,6 +28,8 @@ gem 'devise', '~> 4.2'
 gem 'bcrypt', '~> 3.1'
 # paperclip gem
 gem "paperclip", "~> 5.0.0"
+# paginate
+gem 'will_paginate', '~> 3.1.1'
 
 
 # bundle exec rake doc:rails generates the API under doc/api.

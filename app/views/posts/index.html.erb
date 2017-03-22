@@ -2,7 +2,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-5 col-md-6">
+    <div class="small-12 columns">
           <div class="input-group">
             <%= form_tag posts_path, :method => "get", id: "search-form" do %>
             <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Jobs" %>
@@ -34,8 +34,8 @@
             <% end %>
     <% end %>
   </div> <%# job-list card %>
+  <p><%= will_paginate @posts %></p>
   <div class="post-new-job">
     <%= link_to "Post a New Job", new_post_path, class: "btn btn-primary btn-lg" %>
   </div>
 </div> <%# job-results %>
-
