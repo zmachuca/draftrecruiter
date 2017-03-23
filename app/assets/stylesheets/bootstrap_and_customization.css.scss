@@ -10,6 +10,7 @@ $jumbotron-bg:                     white;
 
 
 
+
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
@@ -314,5 +315,17 @@ body
     font-size: 0.95em;
     font-weight: bold;
     text-align: center;
+}
+
+.panel-success > .panel-heading {
+	color: white;
+	background-color: #bdc3c7;
+	border-color: #bdc3c7;
+}
+
+.panel-info > .panel-heading {
+	color: white;
+	background-color: #f1c40f;
+	border-color: #f1c40f;
 }
 
