@@ -1,6 +1,133 @@
+<div id="hero">
+      <%= image_tag('https://cdn.pixabay.com/photo/2015/05/15/02/05/money-767778_960_720.jpg', class: "pricing-bg") %>
+   </div> <%# hero %>
+<div class="pricing">
+      <div class="row">
+         <div class="pricing-text">
+            <h1> <center> Pricing </center> </h1>
+            		<h3> <center>Jobfill is a resume trading platform that was built by Recruiters for Recruiters. </center> </h3>
+
+                  <h3> <center>Our mission is simple: to help Recruiters fill more jobs.</center> </h3>
+                  <p><center>_________________________________________________________________</center></p><br>
+         </div> <%# how-it-works-text %>
+      </div> <%# row %>
+   </div> <%# how-it-works %>
 <div class="container">
 <div class="jumbotron">
-  <h1> <center> Pricing </center> </h1>
+  <div class="center">
+    <div class="row">
+    	<div class="pricing-box">
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+            <div class="panel panel-success">
+                <div class="cnrflash">
+                    <div class="cnrflash-inner">
+                        <span class="cnrflash-label">MOST
+                            <br>
+                            POPULAR</span>
+                    </div>
+                </div>
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Silver</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="the-price">
+                        <h1><center>
+                            $15<span class="subscript">/mo</center></span></h1>
+                        <small><center>1 month FREE trial</center></small>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <center>Unlimited Job Posts</center>
+                            </td>
+                        </tr>
+                        <tr class="active">
+                            <td>
+                                <center>5 Project</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>100K API Access</center>
+                            </td>
+                        </tr>
+                        <tr class="active">
+                            <td>
+                                <center>200MB Storage</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>24-Hour Response</center>
+                            </td>
+                        </tr>
+                        <tr class="active">
+                            <td>
+                                <center>Weekly Reports</center>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                	<center><%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %></center>1 month FREE trial
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Gold</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="the-price">
+                        <h1><center>
+                            $145<span class="subscript">/year</center></span></h1>
+                        <small><center>($12/month)</center></small>
+                    </div>
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <center>Unlimited Job Posts</center>
+                            </td>
+                        </tr>
+                        <tr class="active">
+                            <td>
+                                <center>20 Project</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>300K API Access</center>
+                            </td>
+                        </tr>
+                        <tr class="active">
+                            <td>
+                                <center>500MB Storage</center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>Custom Cloud Services</center>
+                            </td>
+                        </tr>
+                        <tr class="active">
+                            <td>
+                                <center>Weekly Reports</center>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                	<center><%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-lg" %></center>($12/month)
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+
 
 </div>
 </div>
