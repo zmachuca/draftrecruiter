@@ -9,10 +9,9 @@ $brand-primary:                    #2ECC71;
 $jumbotron-bg:                     white;
 
 
-
-
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+
 
 .center {
      text-align: center;
@@ -219,10 +218,6 @@ img.pricing-bg {
 	margin-right: auto;
 }
 
-body
-{
-    margin-top: 20px;
-}
 
 .the-price
 {
