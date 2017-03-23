@@ -1,40 +1,49 @@
 <div class="home-index main-body" id="main-content">
 	<div id="hero">
-		<div class="row fill">
-		  <div class="col-md-6">
-		  	<h2>Fill more jobs for $15/month</h2>
-		  </div>
-	  </div> 
-	  <div class="learn-more">
-	    	<p> <%= link_to "Learn More", how_it_works_path, class: "btn btn-primary btn-lg" %> </p> 
-	   </div>  
+		<%= image_tag('https://static.pexels.com/photos/89786/cup-of-coffee-laptop-office-macbook-89786.jpeg', class: "home-bg") %>
 	</div> <%# hero %>
 <div class="container">
-	<div class="row">
-		<div class="col-md-4">
-			<h2>
-				<center>Access to Millions of Resumes</center>
-			</h2>
-			<p>
-				Instantly expand your candidate pool to several agency databases and increase your odds of finding the right candidate for that hard-to-fill job.
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				<center>Collaborate with Local Recruiters</center>
-			</h2>
-			<p>
-				Leverage your local Recruiter network and use it as a sourcing pipeline for resumes that are relevant to your needs.
-			</p>
-		</div>
-		<div class="col-md-4">
-			<h2>
-				<center>Fill More Jobs</center>
-			</h2>
-			<p>
-				Combine resources to create an entirely new pipeline that you never had before. The more resumes you send out, the higher chances you have to fill your own job.
-			</p>
-		</div>
-	</div>
-</div>
+	<div class="home-body">
+		<div class="row">
+		  <div class="col-md-6">
+		  	<div class="fill-jobs">
+		  		<h2>Fill more jobs for $15/month.</h2>
+		  		<div class="learn-more">
+	    	<p> <%= link_to "Learn More", how_it_works_path, class: "btn btn-primary btn-lg" %> </p> 
+	  			</div> 
+		  	</div>
+		  </div>
+	  </div> 
+</div> 
+<div class="container">
+		<div class="home-row">
+			<div class="row">
+				<div class="col-md-4">
+					<h2>
+						<center>Access to Millions of Resumes</center>
+					</h2>
+					<p>
+						Instantly expand your candidate pool to several agency databases and increase your odds of finding the right candidate for that hard-to-fill job.
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h2>
+						<center>Collaborate with Local Recruiters</center>
+					</h2>
+					<p>
+						Leverage your local Recruiter network and use it as a sourcing pipeline for resumes that are relevant to your needs.
+					</p>
+				</div>
+				<div class="col-md-4">
+					<h2>
+						<center>Fill More Jobs</center>
+					</h2>
+					<p>
+						Combine resources to create an entirely new pipeline that you never had before. The more resumes you send out, the higher chances you have to fill your own job.
+					</p>
+				</div>
+			</div>
+		</div> <%# home-row %>
+	</div> <%# home-body %>
+</div> <%# container %>
 </div> <%# home-index main-body %>

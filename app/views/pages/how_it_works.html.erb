@@ -1,10 +1,19 @@
+<div id="hero">
+      <%= image_tag('https://static.pexels.com/photos/325229/pexels-photo-325229.jpeg', class: "how-it-works-bg") %>
+   </div> <%# hero %>
+   <div class="how-it-works">
+      <div class="row">
+         <div class="how-it-works-text">
+            <h1> <center> How it Works </center> </h1>
+            		<h3> <center>Jobfill is a resume trading platform that was built by Recruiters for Recruiters. </center> </h3>
+
+                  <h3> <center>Our mission is simple: to help you fill more jobs.</center> </h3>
+                  <p><center>_________________________________________________________________</center></p><br>
+         </div> <%# how-it-works-text %>
+      </div> <%# row %>
+   </div> <%# how-it-works %>
+<div class="container">
 <div class="jumbotron">
-   <h1> <center> How it Works </center> </h1>
-   		<h3> <center> <strong> Jobfill is a resume trading platform that was built by Recruiters for Recruiters. </strong> </center> </h3>
-
-         <h3> <center> <strong> Our mission is simple: to help you fill more jobs. </strong> </center> </h3>
-         <p><center>_________________________________________________________________</center></p><br>
-
    		<p>‣ Do you have an open position that you can't find the right candidate for? 
    		<br>‣ What about a database filled with thousands (millions) of unused resumes?
    		<br>‣ Jobfill was built to turn those unused resumes into placements.</p>
@@ -32,8 +41,8 @@
          <p>You are now apart of a network of Recruiters who are just like you.
          <br>Sign up to start filling more jobs now.</p>
          <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-</div>
-
+</div> <%# jumbotron %>
+</div> <%# container %>
 
 
 

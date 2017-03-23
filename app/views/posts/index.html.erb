@@ -1,40 +1,43 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 <div class="container">
-  <div class="row search">
-    <div class="col-md-8 input-group">
-            <%= form_tag posts_path, :method => "get", id: "search-form" do %>
-            <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Jobs" %>
-            <%= submit_tag "Search", class: 'btn btn-primary btn-md', :name => nil %>
-          <% end %>
-    </div>
-  </div>
-</div>
-
-<h1>Most Recent:</h1>
-<div class="job-results">
-  <div class="job-list card">
-    <div class="sorting-options">
-    </div>
-    <% @posts.each do |post| %>
-      <h3 class="job-title"><%= link_to post.title, post %></h3>
-        <td>Industry: <%= post.industry %></td><br>
-        <td>Requirements: <%= post.requirement %></td><br>
-        <td>Location: <%= post.location %></td><br>
-        <td>Posted by: <%= link_to post.user.username, post.user if post.user %></td><br>
-        <td>Posted on: <%= post.created_at.strftime("%A, %b %d, %Y") %> </td><br>
-            <% if post.user == current_user %>
-              <td><%= link_to 'Edit', edit_post_path(post) %> |</td>
-              <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <% else %>
-              <%= link_to 'Send Resume', post, class: "btn btn-primary btn-sm"  %>
+  <div class="search">
+    <div class="row">
+      <div class="col-md-8 input-group">
+              <%= form_tag posts_path, :method => "get", id: "search-form" do %>
+              <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Jobs" %>
+              <%= submit_tag "Search", class: 'btn btn-primary btn-md', :name => nil %>
             <% end %>
-    <% end %>
-  </div> <%# job-list card %>
-    <div class="paginate">
-     <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+      </div>
     </div>
-  <div class="post-new-job">
-    <%= link_to "Post a New Job", new_post_path, class: "btn btn-primary btn-lg" %>
   </div>
-</div> <%# job-results %>
+
+<div class="container">
+  <h1>Most Recent:</h1>
+  <div class="job-results">
+    <div class="job-list card">
+      <div class="sorting-options">
+      </div>
+      <% @posts.each do |post| %>
+        <h3 class="job-title"><%= link_to post.title, post %></h3>
+          <td>Industry: <%= post.industry %></td><br>
+          <td>Requirements: <%= post.requirement %></td><br>
+          <td>Location: <%= post.location %></td><br>
+          <td>Posted by: <%= link_to post.user.username, post.user if post.user %></td><br>
+          <td>Posted on: <%= post.created_at.strftime("%A, %b %d, %Y") %> </td><br>
+              <% if post.user == current_user %>
+                <td><%= link_to 'Edit', edit_post_path(post) %> |</td>
+                <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <% else %>
+                <%= link_to 'Send Resume', post, class: "btn btn-primary btn-sm"  %>
+              <% end %>
+      <% end %>
+    </div> <%# job-list card %>
+      <div class="paginate">
+       <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+      </div>
+    <div class="post-new-job">
+      <%= link_to "Post a New Job", new_post_path, class: "btn btn-primary btn-lg" %>
+    </div>
+  </div> <%# job-results %>
+</div> <%# container %>

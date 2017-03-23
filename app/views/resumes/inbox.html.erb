@@ -1,12 +1,14 @@
-<h1>Inbox:</h1>
-<div class="job-results">
-  <div class="job-list card">
-    <div class="sorting-options">
-			<% @resumes.each do |resume| %>
-				<h3 class="job-title"><%= resume.post.title %></h3>
-				<p> <%= link_to resume.document_file_name, resume.document.url %></p>
-				<p> Received: <%= resume.created_at.strftime("%A, %b %d, %Y") %> </p>
-			<% end %>
+<div class="container">
+	<h1>Inbox:</h1>
+	<div class="job-results">
+	  <div class="job-list card">
+	    <div class="sorting-options">
+				<% @resumes.each do |resume| %>
+					<h3 class="job-title"><%= resume.post.title %></h3>
+					<p> <%= link_to resume.document_file_name, resume.document.url %></p>
+					<p> Received: <%= resume.created_at.strftime("%A, %b %d, %Y") %> </p>
+				<% end %>
+			</div>
 		</div>
 	</div>
-</idv>
+</div>
