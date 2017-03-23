@@ -3,9 +3,9 @@
 <div class="container">
   <div class="search">
     <div class="row">
-      <div class="col-md-8 input-group">
+      <div class="form-inline">
               <%= form_tag posts_path, :method => "get", id: "search-form" do %>
-              <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Jobs" %>
+              <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: "Search Job Title, Location or Industry..." %>
               <%= submit_tag "Search", class: 'btn btn-primary btn-md', :name => nil %>
             <% end %>
       </div>
@@ -41,3 +41,4 @@
     </div>
   </div> <%# job-results %>
 </div> <%# container %>
+</div>

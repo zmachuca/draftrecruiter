@@ -17,6 +17,7 @@ $jumbotron-bg:                     white;
      text-align: center;
 }
 
+
 // flash messages
 
 .flash-msg {
@@ -47,13 +48,24 @@ $jumbotron-bg:                     white;
 
 // search bar
 
-.input-group .form-control {
+.form-inline {
+	float: center;
+}
+
+.form-inline .form-control {
     position: relative;
     z-index: 2;
     float: left;
-    margin-bottom: 0;
-    width: 600px;
+    margin-bottom: 10px;
+    width: 90%;
+    float: center;
 }
+
+.row .input-group .btn {
+	position: inline-block;
+}
+
+
 
 // footer
 
@@ -88,6 +100,11 @@ img.home-bg{
   padding: auto;
 }
 
+.fill-jobs .h2 {
+
+}
+
+
 // all rows
 
 .row {
@@ -104,6 +121,7 @@ img.home-bg{
 	position: absolute;
 	color: white;
 	margin-top: -40px;
+	width: 100%;
 }
 
 .home-body {
