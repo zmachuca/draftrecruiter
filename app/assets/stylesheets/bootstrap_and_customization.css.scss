@@ -17,6 +17,9 @@ $jumbotron-bg:                     white;
      text-align: center;
 }
 
+.btn-success {
+  background-color: #2ECC71;
+}
 
 // flash messages
 
@@ -320,7 +323,13 @@ img.pricing-bg {
 
 .panel-info > .panel-heading {
 	color: white;
-	background-color: #f1c40f;
-	border-color: #f1c40f;
+	background-color: #F9BF3B;
+	border-color: #F9BF3B;
+}
+
+.panel-danger > .panel-heading {
+  color: white;
+  background-color: #965A38;
+  border-color: #965A38;
 }
 
