@@ -13,40 +13,104 @@
       </div>
   </div>
 
-<div class="container">
-  <div class="jumbotron">
-    <h3>Q: Does this work?</h3>
-    	<p>Yes, this works. However, Jobfill is only as good as it's members. It's your responsibility to share quality resumes that you feel can truly be a good fit for the position. Failure to do so can result in a ban from the platform.</p>
+<div class="jumbotron">
+  <div class="container">
+    <div class="faq-row">
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+           <h3>
+              <center><strong>Does this work?</strong></center>
+           </h3>
+              <center>Yes, this works. However, Jobfill is only as good as it's members. It's your responsibility to share quality resumes that you feel can truly be a good fit for the position. Failure to do so can result in a ban from the platform.</center>
+           </p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+           <h3>
+              <center><strong>How does this work?</strong></center>
+           </h3>
+           <p>
+              <center>Check out our <%= link_to "how it works", how_it_works_path %> page to get a better understanding.</center>
+           </p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+           <h3>
+              <center><strong>How much does this cost?</strong></center>
+           </h3>
+           <p>
+              <center>Check out our <%= link_to "pricing options", pricing_path %> for more information.</center>
+           </p>
+        </div>
+      </div>
+    </div> <%# faq-row %>
+    <div class="faq-row">
+      <div class="row">
+        <div class="col-xs-6 col-md-4">
+           <h3>
+              <center><strong>What <u>exactly</u> am I getting?</strong></center>
+           </h2>
+           </h3>
+              <center>‣ Access to a network of Recruiters in your area.
+              <br>‣ Expanded candidate pipeline from X to X10 more resumes.
+              <br>‣ Powerful advantage to filling more jobs.</center>
+           </p>
+      </div>
+      <div class="col-xs-6 col-md-4">
+          <h3>
+            <center><strong>How can you ensure that I'll receive a quality resumes?</strong></center>
+           </h3>
+           <p>
+              <center>For the time being, we can't guarantee each resume you receive will be the perfect fit. Let us know if you received a totally irrelavent resume. We will conduct a review, refund your inbox credit and hold the sender responsible.</center>
+           </p>
+      </div>
+      <div class="col-xs-6 col-md-4">
+          <h3>
+              <center><strong>What if someone tries to steal my client?</strong></center>
+          </h3>
+          <p>
+              <center>You will never be asked who your clients are. That information isn't required to create a job posting or any other part of the process.<br><u>Never give that information out to anyone.</u></center>
+           </p>
+        </div>
+     </div>
+  </div> <%# faq-row %>
+  <div class="faq-row">
+     <div class="row">
+        <div class="col-xs-6 col-md-4">
+           <h3>
+              <center><strong>What if I want to keep my identity Anonymous?</strong></center>
+           </h2>
+           </h3>
+              <center>No other Recruiter has access to any of your personal information except your username and job posting details. We ask for the company you work for upon registration so that we know where to grow our service to make you more successful.<br><u>That information will never be shared.</u></center>
+           </p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+           <h3>
+              <center><strong>Are Freelance Recruiter allowed to join?</strong></center>
+           </h3>
+           <p>
+              <center>In reality, this is an even better opportunity for Freelance Recruiters. You're resources can grow expotentially because you'll have access to the millions of resumes in Agency databases.</center>
+           </p>
+        </div>
+        <div class="col-xs-6 col-md-4">
+           <h3>
+              <center><strong>Who are you?</strong></center>
+           </h3>
+           <p>
+              <center>We're Recruiters just like you. Read more about us <%= link_to "here.", about_path %> </center>
+           </p>
+        </div>
+     </div>
+  </div> <%# faq-row %>
+</div>
 
-    <h3>Q: How much does this cost?</h3>
-    	<p>$15/month. As of right now, this is the only <%= link_to "pricing", pricing_path %> option. The cost so low because we want it to be affordable for all Recruiters on any budget. That's why when you fill just one of your jobs through Jobfill, its value pays for itself for over a year!</p>
-
-    <h3>Q: What <u>exactly</u> am I getting?</h3>
-    	<p>‣ Access to a network of Recruiters in your area.
-    		<br>‣ Expanded candidate pipeline from X to 10X more resumes.
-    		<br>‣ Powerful advantage to filling more jobs.</p>
-
-    <h3>Q: How can you ensure that I'll receive a quality resume?</h3>
-    	<p>For the time being, we can't guarantee each resume you receive will be the perfect fit. Let us know if you received a totally irrelavent resume. We will conduct a review, refund your inbox credit and hold the sender responsible.</p>
-
-    <h3>Q: What if someone tries to steal my client?</h3>
-    	<p>You will never be asked who your clients are. That information isn't required to create a job posting or any other part of the process. <u>Never give that information out to anyone.</u></p>
-
-    <h3>Q: What if I want to keep my identity Anonymous?</h3>
-    	<p>No other Recruiter has access to any of your personal information except your username and job posting details. We ask for the company you work for upon registration so that we know where to grow our service to make you more successful. <u>That information will never be shared.</u></p>
-
-    <h3>Q: Are Freelance Recruiter allowed to join?</h3>
-    	<p>In reality, this is an even better opportunity for Freelance Recruiters. You're resources can grow expotentially because you'll have access to the millions of resumes in Agency databases.</p>
-      
-    <h3>Q: Who are you?</h3>
-      <p>We're Recruiters just like you. Read more about us <%= link_to "here.", about_path %> </p>
-
-      <p><center>_________________________________________________________________</center></p><br>
-      <h2><center><strong>Ready to start filling more jobs?</strong></center></h2>
-      <p><center><%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %></center</p>
+<p><center>_________________________________________________________________</center></p><br>
 
   </div>
-</div>
+  <div class="container">
+         <center><h2><strong>You're not alone anymore.</strong></h2>
+         <p>You are now apart of a network of Recruiters who are just like you.
+         <br>Sign up to start filling more jobs now.</p>
+         <%= link_to "Get Started", pricing_path, class: "btn btn-primary btn-lg" %></center>
+         </div>
 
 
 

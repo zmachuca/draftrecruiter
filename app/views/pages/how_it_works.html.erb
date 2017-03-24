@@ -1,5 +1,5 @@
 <div id="hero">
-      <%= image_tag('https://static.pexels.com/photos/325229/pexels-photo-325229.jpeg', class: "about-bg") %>
+      <%= image_tag('https://images.pexels.com/photos/317385/pexels-photo-317385.jpeg?w=940&h=650&auto=compress&cs=tinysrgb', class: "about-bg") %>
    </div> <%# hero %>
    <div class="how-it-works">
       <div class="row">
@@ -12,36 +12,81 @@
          </div> <%# how-it-works-text %>
       </div> <%# row %>
    </div> <%# how-it-works %>
-<div class="container">
-<div class="jumbotron">
-   		<p>‣ Do you have an open position that you can't find the right candidate for? 
-   		<br>‣ What about a database filled with thousands (millions) of unused resumes?
-   		<br>‣ Jobfill was built to turn those unused resumes into placements.</p>
-         <p><center>_________________________________________________________________</center></p>
-   		 
-   		<h2><center><strong>« Send unused candidates to Recruiters who need them. »</strong></center></h2>
-         <h2><center><strong>» Receive candidates from Recruiters who don't need them. «</strong></center></h2>
-         <p><center>_________________________________________________________________</center></p><br>
-   		<p>We follow a very simple rule: <strong>In order to recieve a resume <u>you must first give one away.</strong></u></p>
-   		<p><strong>Step 1:</strong> Register.</p> 
-   		<p><strong>Step 2:</strong> Post one of your current job openings.</p>
-   		<p><strong>Step 3:</strong> Send out as many resumes as you can to other job postings.<br>
-         <i>(For every resume you send out, you may only receive that equal amount.)</i></p>
-         <p><strong>Step 4:</strong> Receive qualified resumes sent by other Recruiters for your job posting.</p>
-         <p><strong>Step 5:</strong> Continue this process until you find the right candidate!</p>
-         <p>_________________________________________________________________</p>
-         <h2><strong>Privacy</strong></h2>
-         <p>✔ No personal information is seen by others.
-         <br>✔ Your clients are anonymous.
-         <br>✔ Your privacy is safe.</p>
-         <p>Find out more at <%= link_to "FAQ", faq_path %>!<p>
 
-         <p>_________________________________________________________________</p>
-         <h2><strong>You're not alone anymore.</strong></h2>
+<div class="jumbotron">
+   <div class="container">
+   		<h2><center><strong>Send unused candidates to Recruiters who need them</strong></center></h2>
+         <h2><center><strong>Receive candidates from Recruiters who don't need them</strong></center></h2>
+         <p><center>_________________________________________________________________</center></p><br>
+      <div class="how-it-works-row">
+         <div class="row">
+            <div class="col-xs-6 col-md-4">
+               <h3>
+                  <center><strong>Post Current Openings</strong></center>
+               </h2>
+               </h3>
+                  <center>Post your current openings so that you can receive a pipeline of candidates qualified by other Recruiters in your area.</center>
+               </p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+               <h3>
+                  <center><strong>Share Unused Candidates</strong></center>
+               </h3>
+               <p>
+                  <center>Submit your unused resumes to positions that they qualify for. Quality is everything, so only send someone who is truly a good fit.</center>
+               </p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+               <h3>
+                  <center><strong>Receive Qualified Resumes</strong></center>
+               </h3>
+               <p>
+                  <center>For every resume you send out, you will be able to receive the equal amount for your own job postings.</center>
+               </p>
+            </div>
+         </div>
+      </div> <%# home-row %>
+   		<center><h3><strong>In order to recieve a resume, you must send one.</strong></h3></center>
+         <p><center>_________________________________________________________________</center></p>
+         <div class="how-it-works-row">
+         <div class="row">
+            <div class="col-xs-6 col-md-4">
+               <h3>
+                  <center><strong>Privacy</strong></center>
+               </h2>
+               </h3>
+                  <p>✔ No personal info is seen by others.
+                  <br>✔ Your company is anonymous.
+                  <br>✔ Your clients are anonymous.
+                  <br>✔ Your privacy is safe.</p>
+                  <center><p>Find out more at <%= link_to "FAQ", faq_path %>!<p>
+                  </p></center>
+            </div>
+            <div class="col-xs-6 col-md-4">
+               <h3>
+                  <center><strong>Share Unused Candidates</strong></center>
+               </h3>
+               <p>
+                  <center>Submit your unused resumes to positions that they qualify for. Quality is everything, so only send someone who is truly a good fit.</center>
+               </p>
+            </div>
+            <div class="col-xs-6 col-md-4">
+               <h3>
+                  <center><strong>Receive Qualified Resumes</strong></center>
+               </h3>
+               <p>
+                  <center>For every resume you send out, you will be able to receive the equal amount for your own job postings.</center>
+               </p>
+            </div>
+         </div>
+      </div> <%# home-row %>
+</div> <%# container %>
+</div> <%# jumbotron %>
+         <center><h2><strong>You're not alone anymore.</strong></h2>
          <p>You are now apart of a network of Recruiters who are just like you.
          <br>Sign up to start filling more jobs now.</p>
-         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-</div> <%# jumbotron %>
+         <%= link_to "Get Started", pricing_path, class: "btn btn-primary btn-lg" %></center>
+         </div>
 </div> <%# container %>
 
 

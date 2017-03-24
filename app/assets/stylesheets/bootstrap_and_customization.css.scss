@@ -1,7 +1,7 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url('https://fonts.googleapis.com/css?family=Cabin');
 
 $body-bg:                          #ecf0f1;
-$font-family-sans-serif:           'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif:           'Cabin', sans-serif;
 $navbar-height:                    100px;
 $navbar-default-bg:                white;
 $navbar-default-brand-color:       #2ECC71;
@@ -33,6 +33,11 @@ $jumbotron-bg:                     white;
 	margin-top: 370px;
 }
 
+.jumbotron .how-it-works-row p {
+  font-size: 15px;
+}
+
+
 // panel heading (signup + login)
 
 .panel-default {
@@ -45,6 +50,7 @@ $jumbotron-bg:                     white;
 
 .navbar-brand {
      font-weight: bold;
+     font-size: 40px;
 }
 
 .navbar {
@@ -82,9 +88,7 @@ $jumbotron-bg:                     white;
   padding-top: 30px;
 }
 
-.footer .container {
-	min-width: 100%;
-}
+
 
 .footer-bottom {
 	border-radius: 3px;
@@ -159,6 +163,10 @@ img.how-it-works-bg {
 	margin-top: 60px;
 }
 
+.how-it-works .how-it-works-text h1 {
+  font-size: 60px;
+}
+
 // faq
 
 img.faq-bg {
@@ -178,7 +186,11 @@ img.faq-bg {
 	margin-top: 60px;
 }
 
-// how it works
+.faq .faq-text h1 {
+  font-size: 60px;
+}
+
+// about us
 
 img.about-bg {
 	display: block;
@@ -195,6 +207,10 @@ img.about-bg {
 	color: white;
 	align: center;
 	margin-top: 60px;
+}
+
+.about .about-text h1 {
+  font-size: 60px;
 }
 
 // pricing
@@ -214,6 +230,10 @@ img.pricing-bg {
 	color: white;
 	align: center;
 	margin-top: 60px;
+}
+
+.pricing .pricing-text h1 {
+  font-size: 60px;
 }
 
 .row .pricing-box {
@@ -318,18 +338,58 @@ img.pricing-bg {
 .panel-success > .panel-heading {
 	color: white;
 	background-color: #bdc3c7;
-	border-color: #bdc3c7;
+}
+
+.panel-success {
+  border-color: #bdc3c7;
 }
 
 .panel-info > .panel-heading {
 	color: white;
 	background-color: #F9BF3B;
-	border-color: #F9BF3B;
+}
+
+.panel-info {
+  border-color: #F9BF3B;
+}
+
+.panel-danger {
+  border-color: #965A38;
 }
 
 .panel-danger > .panel-heading {
   color: white;
   background-color: #965A38;
-  border-color: #965A38;
 }
+
+
+// privacy
+
+img.privacy-bg {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  margin: auto;
+  padding: auto;
+}
+
+.privacy .row {
+  display: block;
+  position: absolute;
+  color: white;
+  align: center;
+  margin-top: 60px;
+}
+
+.privacy .privacy-text h1 {
+  font-size: 90px;
+}
+
+
+
+
+
+
+
 

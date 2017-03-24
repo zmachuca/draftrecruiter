@@ -2,7 +2,8 @@
 <footer>
     <div class="footer" id="footer">
         <div class="container">
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
                     <h3> Jobfill </h3>
                     <ul>
                         <li> <%= link_to "How It Works", how_it_works_path %> </li>
@@ -10,19 +11,19 @@
                         <li> <%= link_to "FAQ", faq_path %> </li>
                     </ul>
                 </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                <div class="col-xs-6 col-sm-3">
                     <h3> Feedback </h3>
                     <ul>
-                        <li> <%= mail_to "support@jobfill.co", "How Can We Make Jobfill Better?" %> </li>
+                        <li> <%= mail_to "support@jobfill.co", "How can we make Jobfill better?" %> </li>
                     </ul>
                 </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                <div class="col-xs-6 col-sm-3">
                     <h3> Join Our Team </h3>
                     <ul>
-                        <li> <%= mail_to "join@jobfill.co", "Tell Us Why You'd Be A Great Fit!" %> </a> </li>
+                        <li> <%= mail_to "join@jobfill.co", "Tell us about yourself!" %> </a> </li>
                     </ul>
                 </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                <div class="col-xs-6 col-sm-3">
                     <h3> Contact Us </h3>
                     <ul>
                         <li> <a href="#"> <%= mail_to "support@jobfill.co", "Report a Resume" %> </a> </li>
@@ -31,10 +32,9 @@
                         <li> <%= link_to "Privacy Policy", privacy_path %> </li>
                     </ul>
                 </div>
-        </div>
-        <!--/.container--> 
-    </div>
-    <!--/.footer-->
+            </div> <!--/.row--> 
+        </div> <!--/.container--> 
+    </div> <!--/.footer-->
     
     <div class="footer-bottom">
         <div class="container">
