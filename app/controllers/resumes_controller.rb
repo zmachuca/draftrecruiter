@@ -25,6 +25,10 @@ class ResumesController < ApplicationController
       Unlock.create(user_id: current_user.id, resume_id: resume.id)
       send_file resume.document.path.split('?')[0], :filename => "resume.pdf", :type => "application/pdf" "application/doc", :disposition => "attachment"
     end
+    if current_user.credits = 0
+      flash[:success] = "Your Credit balance is zero. You must submit more resumes!"
+      redirect_to :root
+    end
   end
 
   def inbox
