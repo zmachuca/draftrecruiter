@@ -12,6 +12,7 @@ class ResumesController < ApplicationController
     if @resume.save 
       current_user.credits = current_user.credits + 1
       current_user.save!
+      flash[:success] = "Congratulations! Your Candidate has been submitted and 1 Credit has been added to your account!"
       redirect_to :root
     end
   end
@@ -22,7 +23,7 @@ class ResumesController < ApplicationController
       current_user.credits = current_user.credits - 1
       current_user.save!
       Unlock.create(user_id: current_user.id, resume_id: resume.id)
-      send_file resume.document.path.split('?')[0], :filename => "resume.pdf", :type => "application/pdf", :disposition => "attachment"
+      send_file resume.document.path.split('?')[0], :filename => "resume.pdf", :type => "application/pdf" "application/doc", :disposition => "attachment"
     end
   end
 
