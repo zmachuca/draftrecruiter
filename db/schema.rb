@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170315234101) do
+ActiveRecord::Schema.define(version: 20170401184221) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
@@ -39,6 +39,16 @@ ActiveRecord::Schema.define(version: 20170315234101) do
   add_index "resumes", ["post_id"], name: "index_resumes_on_post_id"
   add_index "resumes", ["user_id"], name: "index_resumes_on_user_id"
 
+  create_table "unlocks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "resume_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "unlocks", ["resume_id"], name: "index_unlocks_on_resume_id"
+  add_index "unlocks", ["user_id"], name: "index_unlocks_on_user_id"
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -56,6 +66,7 @@ ActiveRecord::Schema.define(version: 20170315234101) do
     t.string   "username"
     t.string   "company"
     t.string   "last_name"
+    t.integer  "credits",                default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

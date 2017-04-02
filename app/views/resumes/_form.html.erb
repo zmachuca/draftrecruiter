@@ -4,7 +4,7 @@
 		<%= form_for [@post, @resume] do |f| %>
 
 		<h3><div class="form-group">
-		    <%= f.label :document, "Upload a Resume for:" %> <%= @post.title %>
+		    <%= f.label :document, "Submit a Candidate:" %> <%= @post.title %>
 		    <%= f.file_field :document, class: "form-control" %>
 		  </div></h3>
 		  <p><strong>I CONFIRM THE FOLLOWING:</strong>

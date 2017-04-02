@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
    has_many :posts
    has_many :resumes
    has_many :incoming_resumes, through: :posts, source: :resumes
+   has_many :unlocks
+   has_many :unlocked_resumes, through: :unlocks, source: :resume
 end
