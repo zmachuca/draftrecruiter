@@ -1,7 +1,6 @@
 <div class="container">
 	<h1>Inbox:</h1>
-	<h2>*Important: When you view a new Candidate, you will lose 1 Credit*</h2>
-	<h3><i>You currently have <%= current_user.credits %> Credits remaining...</i></h3>
+	<h3><i>You currently have <%= current_user.credits %> Credit(s) remaining...</i></h3>
 	<div class="job-results">
 	  <div class="job-list card">
 	    <div class="sorting-options">
@@ -9,7 +8,7 @@
 						<h3 class="job-title"> <%= resume.post.title %> </h3>
 						<p> <%= link_to resume.document_file_name, resume_path(resume), :target => "_blank" %> </p>
 						<p> Received: <%= resume.created_at.strftime("%A, %b %d, %Y") %> </p>
-						<% if current_user.unlocked_resumes.include?(resume) %><h4><i>Viewed</i></h4> <% end %>
+						<% if current_user.unlocked_resumes.include?(resume) %><h4><i>Opened</i></h4> <% end %>
 					<% end %>
 			</div>
 		</div>
