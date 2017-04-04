@@ -3,6 +3,13 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  def show
+  	resume = Resume.find(params[:id])
+  	if current_user.credits = 0
+      flash[:success] = "Your Credit balance is zero. Submit more resumes for more Credits!"
+    end
+  end
+
   private
   
   def correct_user
