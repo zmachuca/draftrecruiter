@@ -19,7 +19,9 @@ class ResumesController < ApplicationController
 
   def show
     resume = Resume.find(params[:id])
-    if current_user.credits > 0
+    if current_user.unlocks.where(resume_id: resume.id).length > 0
+      send_file resume.document.path.split('?')[0], :filename => resume.document_file_name, :type => "application/pdf", :disposition => "attachment"
+    elsif current_user.credits > 0
       current_user.credits = current_user.credits - 1
       current_user.save!
       Unlock.create(user_id: current_user.id, resume_id: resume.id)
