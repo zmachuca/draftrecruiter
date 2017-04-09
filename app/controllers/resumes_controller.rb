@@ -39,6 +39,13 @@ class ResumesController < ApplicationController
     @resumes = current_user.incoming_resumes.order("created_at DESC")
     end
 
+  def destroy
+    @resume = Resume.find(params[:id])
+    @resume.destroy
+    flash[:success] = "Your Resume has been successfully deleted!"
+    redirect_to inbox_path
+  end
+
   private
 
   def resume_params

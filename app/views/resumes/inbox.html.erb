@@ -9,6 +9,7 @@
 						<p> <%= link_to resume.document_file_name, resume_path(resume), :target => "_blank" %> </p>
 						<p> Received: <%= resume.created_at.strftime("%A, %b %d, %Y") %> </p>
 						<% if current_user.unlocked_resumes.include?(resume) %><h4><i>Opened</i></h4> <% end %>
+						<p><%= link_to 'Delete', resume, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 					<% end %>
 			</div>
 		</div>
