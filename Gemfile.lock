@@ -96,6 +96,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.20.0)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -176,6 +177,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 5.0.0)
+  pg
   rails (= 4.2.5)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

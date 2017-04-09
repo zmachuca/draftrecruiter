@@ -48,8 +48,8 @@ Rails.application.configure do
     domain: "jobfill.co",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: 'ENV["JOBFILL_USERNAME'],
-    password: 'ENV["JOBFILL_PASSWORD']
+    user_name: ENV["JOBFILL_USERNAME"],
+    password: ENV["JOBFILL_PASSWORD"]
   }
 
 end
