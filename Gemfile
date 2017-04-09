@@ -33,6 +33,8 @@ gem 'will_paginate', '~> 3.1.1'
 # paginate bootstrap
 gem 'will_paginate-bootstrap'
 
+gem "letter_opener", :group => :development
+
 
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc

@@ -10,6 +10,7 @@ class ResumesController < ApplicationController
     @resume.user_id = current_user.id
     @resume.post_id = params[:post_id]
     if @resume.save 
+
       current_user.credits = current_user.credits + 1
       current_user.save!
       flash[:success] = "Congratulations! Your Candidate has been submitted and 1 Credit has been added to your account!"
