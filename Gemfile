@@ -33,7 +33,7 @@ gem 'will_paginate', '~> 3.1.1'
 # paginate bootstrap
 gem 'will_paginate-bootstrap'
 
-gem "letter_opener", :group => :development
+gem 'figaro'
 
 
 # bundle exec rake doc:rails generates the API under doc/api.
