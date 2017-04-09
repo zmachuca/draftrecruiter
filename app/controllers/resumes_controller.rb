@@ -1,4 +1,5 @@
 class ResumesController < ApplicationController
+  helper_method :count
 
 	def new
     @resume = Resume.new
@@ -44,6 +45,10 @@ class ResumesController < ApplicationController
     @resume.destroy
     flash[:success] = "Your Resume has been successfully deleted!"
     redirect_to inbox_path
+  end
+
+  def count
+    current_user.resumes.count
   end
 
   private

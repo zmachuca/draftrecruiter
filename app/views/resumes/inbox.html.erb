@@ -1,5 +1,5 @@
 <div class="container">
-	<h1>Inbox:</h1>
+	<h1>You have <%= current_user.incoming_resumes.count %> Resumes in your Inbox:</h1>
 	<h3><i>You currently have <%= current_user.credits %> Credit(s) remaining...</i></h3>
 	<div class="job-results">
 	  <div class="job-list card">
