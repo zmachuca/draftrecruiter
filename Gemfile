@@ -25,7 +25,7 @@ gem 'devise', '~> 4.2'
 # bcrypt gem
 gem 'bcrypt', '~> 3.1'
 # paperclip gem
-gem "paperclip", "~> 5.0.0"
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 # paginate
 gem 'will_paginate', '~> 3.1.1'
 # paginate bootstrap
