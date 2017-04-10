@@ -30,8 +30,10 @@ gem "paperclip", "~> 5.0.0"
 gem 'will_paginate', '~> 3.1.1'
 # paginate bootstrap
 gem 'will_paginate-bootstrap'
-
+# gem to use environment variables
 gem 'figaro'
+# AWS
+gem 'aws-sdk', '< 2.0'
 
 
 # bundle exec rake doc:rails generates the API under doc/api.
