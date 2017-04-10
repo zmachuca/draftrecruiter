@@ -12,7 +12,7 @@ class ResumesController < ApplicationController
     @resume.post_id = params[:post_id]
     if @resume.save 
 
-      #ResumeMailer.resume_received(@resume).deliver_now
+      ResumeMailer.resume_received(@resume).deliver_now
 
       current_user.credits = current_user.credits + 1
       current_user.save!
