@@ -24,12 +24,12 @@ class ResumesController < ApplicationController
   def show
     resume = Resume.find(params[:id])
     if current_user.unlocks.where(resume_id: resume.id).length > 0
-      send_file resume.document.path.split('?')[0], :filename => resume.document_file_name, :type => "application/pdf", :disposition => "attachment"
+      send_file resume.document.path.split('?')[0], :filename => resume.document_file_name, :type => ["application/pdf", "application/doc", "application/docx"], :disposition => "attachment"
     elsif current_user.credits > 0
       current_user.credits = current_user.credits - 1
       current_user.save!
       Unlock.create(user_id: current_user.id, resume_id: resume.id)
-      send_file resume.document.path.split('?')[0], :filename => resume.document_file_name, :type => "application/pdf", :disposition => "attachment"
+      send_file resume.document.path.split('?')[0], :filename => resume.document_file_name, :type => ["application/pdf", "application/doc", "application/docx"], :disposition => "attachment"
     else
       flash[:success] = "Your Credit balance is zero. Submit more resumes for more Credits!"
       redirect_to inbox_path

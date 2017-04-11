@@ -1,6 +1,7 @@
 <div class="container">
-	<h1>You have <%= current_user.incoming_resumes.count %> Resumes in your Inbox:</h1>
-	<h3><i>You currently have <%= current_user.credits %> Credit(s) remaining...</i></h3>
+	<h1> Inbox:
+		<br><%= current_user.incoming_resumes.count %> Candidates total</h1>
+	<h3><% if current_user.credits == 1 %> <i>You currently have <%= current_user.credits %> Credit remaining... <% else %> <i>You currently have <%= current_user.credits %> Credits remaining...</i> <% end %></h3>
 	<div class="job-results">
 	  <div class="job-list card">
 	    <div class="sorting-options">
@@ -8,7 +9,7 @@
 						<h3 class="job-title"> <%= resume.post.title %> </h3>
 						<p> <%= link_to resume.document_file_name, resume_path(resume), :target => "_blank" %> </p>
 						<p> Received: <%= resume.created_at.strftime("%A, %b %d, %Y") %> </p>
-						<% if current_user.unlocked_resumes.include?(resume) %><h4><i>Opened</i></h4> <% end %>
+						<h4> <% if current_user.unlocked_resumes.include?(resume) %><h4><i>Viewed</i></h4> <% else %> <i>Pending</i> <% end %> </h4>
 						<p><%= link_to 'Delete', resume, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 					<% end %>
 			</div>
