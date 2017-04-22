@@ -1,6 +1,7 @@
 <div class="container">
 	<h1> Inbox:
-		<br><%= current_user.incoming_resumes.count %> Candidates total</h1>
+		<br><%= current_user.incoming_resumes.count %> Candidates total<br>
+		<%= current_user.unlocked_resumes.length %> Viewed resumes</h1>
 	<h3><% if current_user.credits == 1 %> <i>You currently have <%= current_user.credits %> Credit remaining... <% else %> <i>You currently have <%= current_user.credits %> Credits remaining...</i> <% end %></h3>
 	<div class="job-results">
 	  <div class="job-list card">
