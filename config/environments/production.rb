@@ -84,7 +84,7 @@ Rails.application.configure do
 
   config.action_mailer.smtp_settings = {
     address: "smtp.mailgun.org",
-    port: 587,
+    port: "587",
     domain: ENV["DOMAIN"],
     authentication: "plain",
     enable_starttls_auto: true,
