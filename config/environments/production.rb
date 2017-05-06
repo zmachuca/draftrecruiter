@@ -83,13 +83,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address: "mail.privateemail.com",
-    port: 26,
-    domain: "mg.jobfill.co",
+    address: "smtp.mailgun.org",
+    port: 587,
+    domain: ENV["DOMAIN"],
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["JOBFILL_USERNAME"],
-    password: ENV["JOBFILL_PASSWORD"]
+    user_name: ENV["MAILGUN_USERNAME"],
+    password: ENV["MAILGUN_PASSWORD"]
   }
 
   config.paperclip_defaults = {
