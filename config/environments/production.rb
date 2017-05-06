@@ -89,7 +89,7 @@ Rails.application.configure do
     user_name: ENV["MAILGUN_USERNAME"],
     password: ENV["MAILGUN_PASSWORD"]
     authentication: "plain",
-    enable_starttls_auto: true,
+    enable_starttls_auto: true
   }
 
   config.paperclip_defaults = {
