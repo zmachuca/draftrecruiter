@@ -85,7 +85,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "mail.privateemail.com",
     port: 26,
-    domain: "jobfill.co",
+    domain: "mg.jobfill.co",
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV["JOBFILL_USERNAME"],
