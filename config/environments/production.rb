@@ -75,7 +75,7 @@ Rails.application.configure do
 
   # Required for Heroku
   # Note to set this to your actual hostname
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'www.jobfill.co', protocol: 'https' }
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
