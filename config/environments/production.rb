@@ -87,8 +87,8 @@ Rails.application.configure do
     port: 587,
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["JOBFILL_USERNAME"],
-    password: ENV["JOBFILL_PASSWORD"]
+    user_name: ENV["MAILGUN_USERNAME"],
+    password: ENV["MAILGUN_PASSWORD"]
   }
 
   config.paperclip_defaults = {
