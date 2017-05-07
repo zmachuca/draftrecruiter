@@ -1,5 +1,5 @@
 class ResumeMailer < ApplicationMailer
-  default from: "postmaster@mg.jobfill.co"
+  default from: "support@jobfill.co"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:

@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "postmaster@mg.jobfill.co"
+  default from: "support@jobfill.co"
   layout 'mailer'
 end
