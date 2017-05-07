@@ -1,5 +1,4 @@
 class ResumeMailer < ApplicationMailer
-  default from: "support@jobfill.co"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
@@ -11,6 +10,7 @@ class ResumeMailer < ApplicationMailer
     @post = @resume.post
 
     mail to: @post.user.email,
+         from: "support@jobfill.co",
     		subject: "Jobfill: You have received a new Candidate for the #{@post.title} posting!"
   end
 end
