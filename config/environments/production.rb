@@ -88,8 +88,8 @@ Rails.application.configure do
     domain: "gmail.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["GMAIL_PASSWORD"],
+    user_name: ENV["jobfillteam@gmail.com"],
+    password: ENV["Blue23blue23"],
     openssl_verify_mode: 'none'
   }
 
