@@ -423,3 +423,29 @@ img.terms-bg {
 
 
 
+@media (max-width: 767px) {
+  .faq .faq-text h1 {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .faq .faq-text h3 {
+  font-size: 18px;
+}
+.faq-row h3{
+  font-size:20px;
+}
+.about .about-text h1 {
+  font-size: 32px;
+}
+.about_jumbotron{
+  padding:20px;
+}
+.about_jumbotron p {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.footer h3{
+  font-size:22px;
+}
+}
