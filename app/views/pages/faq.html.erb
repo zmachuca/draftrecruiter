@@ -1,13 +1,12 @@
 <div id="hero">
-      <%= image_tag('https://static.pexels.com/photos/80378/study-pen-school-notebook-80378.jpeg', class: "faq-bg") %>
+      <%= image_tag("photos/faq.jpg", class: "faq-bg") %>
    </div> <%# hero %>
    <div class="faq">
       <div class="row">
         <div class="faq-text">
-          <h1> <center> Frequently Asked Questions </center> </h1><br>
-          <h3> <center>Jobfill is a resume trading platform that was built by Recruiters for Recruiters. </center> </h3>
+          <h1> <center> Frequently Asked Questions </center> </h1>
+          <h3> <center>Feel free to contact us if you have any questions. </center> </h3>
 
-            <h3> <center>Our mission is simple: to help Recruiters fill more jobs.</center> </h3>
             <center>_________</center></p>
         </div>
       </div>
@@ -22,7 +21,7 @@
               <center><strong>How does this work?</strong></center>
            </h3>
            <p>
-              <center>Post your current job openings, send unused Candidates to other Recruiters and get Candidates sent to you in return for your jobs. Check out our <%= link_to "how it works", how_it_works_path %> page to get a better understanding.</center>
+              <center>Post your current job openings, send unused Candidates to other Recruiters and get Candidates sent to you in return for your openings. Check out our <%= link_to "how it works", how_it_works_path %> page to get a better understanding.</center>
            </p>
         </div>
         <div class=" col-md-4">
@@ -37,7 +36,7 @@
            <h3>
               <center><strong>Why would I send my Candidates to another Recruiter?</strong></center>
            </h3>
-              <center>The Candidates you're sending to other Recruiters are the ones that you don't have a current need for. They can either be lost in your database or be traded in exchange for a Candidate that you need right now. Your ideal Candidate may not be in your database, but they will defintely be in someone else's.</center>
+              <center>The Candidates you're sending to other Recruiters are the ones that you don't have a current need for. They can either be lost in your database or be traded in exchange for a Candidate that you need <u>right now</u>. Your ideal Candidate may not be in your database, but they will defintely be in someone else's.</center>
            </p>
         </div>
       </div>
@@ -50,7 +49,7 @@
            </h2>
            </h3>
               <center>‣ Collaboration with a network of local Recruiters.
-              <br>‣ Expanding your Candidate pipeline from X to 10X more resumes.
+              <br>‣ Expanding your Candidate pipeline from X to 10X.
               <br>‣ Powerful advantage to filling more jobs.
               <br>‣ Positioning yourself to earn more money.</center>
            </p>
@@ -88,7 +87,7 @@
               <center><strong>Are Freelance Recruiter allowed to join?</strong></center>
            </h3>
            <p>
-              <center>In reality, this is an even better opportunity for Freelance Recruiters. Your resources can grow expotentially because you'll have a network with millions of Candidates from Agency databases.</center>
+              <center>This is an even better opportunity for Freelance Recruiters. Your resources can grow expotentially because you'll have a network with millions of Candidates from Agency databases.</center>
            </p>
         </div>
         <div class=" col-md-4">
@@ -110,7 +109,7 @@
          <center><h2><strong>You're not alone anymore.</strong></h2>
          <p>You are now apart of a network of Recruiters who are just like you.
          <br>Sign up to start filling more jobs now.</p>
-         <%= link_to "Get Started", how_it_works_path, class: "btn btn-primary btn-lg" %></center>
+         <%= link_to "Get Started", new_user_registration_path, class: "btn btn-primary btn-lg" %></center>
          </div>
 
 
